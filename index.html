@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></meta>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>KMTC LEAVE APP</title>
+
+		<link href="css/main.css" rel="stylesheet" /></li>
+		<link href="css/bootstrap.min.css" rel="stylesheet" /></li>
+		<script src="js/respond.js"></script>
+	
+
+	</head>
+
+	<body>
+
+		<!-- header -->
+		<div class ="navbar navbar-inverse navbar-static-top">
+			<div class="container">
+				<a href="#" class="navbar-brand">KMTC LEAVE APP</a>
+				<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+					<span class = "icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse navHeaderCollapse">
+
+					<ul class = "nav navbar-nav navbar-right">
+						<li><a href="{{ url }}"> {{ url_linktext }} </a> {{user.nickname}}</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- end --> 		
+		
+		
+		{% if user %}
+		<div class="rows">
+			<div class="col-md-2"></div>
+			<div class="col-md-6">
+				<p>
+					Welcome {{user.nickname}} to the KMTC Leave App.
+				</p>
+				<p>
+					Fill in the form below to apply for leave.
+				</p>
+				
+				<!-- Leave form -->
+					<form action="/" method="post" class="form well" role="form">
+								<div class="form-group">
+									<label for="shortDescription">Admission Number*</label>
+									<input type="text" name="adm_no" id="adm_no" class="form-control" />									
+								</div>
+
+							    <div class="form-group" >
+							    	<label for="url" >Semester*</label>
+							    	<input type="text" name="sem" id="sem" class="form-control" placeholder="S1/2014"/>
+							      	
+							    </div>
+
+						    	<button class="btn btn-primary" type="submit">Search</button>
+						    
+					</form>					
+
+			</div>
+			</div>
+			</div><!-- container end -->
+			<br />
+		<!-- End -->
+			{% else %}
+			<div class = "container text-center">
+				<div class="jumbotron">
+
+					<h2>Want to apply for leave?</h2>
+					
+				</div>
+				<p>Login with your <b>KMTC Google Account</b> to apply for leave.</p>
+			</div>
+			{% endif %}
+			<hr />
+			<div class="container">
+				<div class="rows">
+					<div class="col-md-2"></div>
+					<div class="col-md-8">
+						
+
+
+						
+					</div>
+				</div><!--rows div tag -->
+
+			<hr />
+		</div>
+	<!-- javascript -->
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    	<script src="js/bootstrap.min.js"></script>
+    	
+	<!-- End -->
+
+	<!--footer -->
+	<br />
+	<br />
+	<br />
+	<div class="navbar navbar-default navbar-fixed-bottom">
+		<div class="container">
+			<p class="navbar-text pull-left">Powered By Intellisoftplus</p>
+
+		</div>
+
+	</div>
+	<!-- end -->
+	
+	</body>
+
+</html>
